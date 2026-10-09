@@ -40,7 +40,7 @@ bymyside 将这些工作交给助手维护。你可以随时输入事项、想�
 
 ### 2. 用 AI 助手打开文件夹
 
-在常用的 AI 办公助手中选择“打开文件夹”，或新建项目并选择解压后的文件夹。打开后应能找到 `START_HERE.md`。
+在常用的 AI 办公助手中选择“打开文件夹”，或新建项目并选择解压目录中的 **`bymyside` 子文件夹**（不是外层 `bymyside-main`）。打开后应能找到 `START_HERE.md`。
 
 如果助手支持解压文件，也可以直接把 ZIP 交给它处理。
 
@@ -58,7 +58,7 @@ bymyside 将这些工作交给助手维护。你可以随时输入事项、想�
 
 **配置完成后，每日和每周流程自动运行。** 如果平台要求点击确认，助手会指出需要完成的操作；缺少必要能力时，会说明具体哪一步暂时无法完成。
 
-详细步骤与故障处理见 [开始使用](docs/getting-started.md)。
+详细步骤与故障处理见 [开始使用](bymyside/docs/getting-started.md)。
 
 <details>
 <summary>使用 Git 下载</summary>
@@ -69,7 +69,7 @@ bymyside 将这些工作交给助手维护。你可以随时输入事项、想�
 git clone REPOSITORY_URL
 ```
 
-然后用 AI 助手打开下载得到的文件夹，发送上面的初始化指令。
+然后用 AI 助手打开下载目录中的 `bymyside` 子文件夹，发送上面的初始化指令。
 
 </details>
 
@@ -127,13 +127,13 @@ flowchart TD
 >
 > 读书网站保留为候选想法，周日评估尝试窗口。方案目前仍有工时不足的风险，今天的进展会用于调整周四安排。
 
-更多场景见 [使用指南](docs/usage.md)，完整虚构资料见 [examples/memory](examples/memory)。
+更多场景见 [使用指南](bymyside/docs/usage.md)，完整虚构资料见 [examples/memory](bymyside/examples/memory)。
 
 ## 常见问题
 
 ### 可以用在哪些助手中？
 
-不绑定特定品牌。平台需要能读取规则、持久保存项目记录、定时执行并访问同一份资料。日程文件解析和通知方式使用所在平台的能力。具体要求见 [平台与自动化说明](docs/compatibility.md)。
+不绑定特定品牌。平台需要能读取规则、持久保存项目记录、定时执行并访问同一份资料。日程文件解析和通知方式使用所在平台的能力。具体要求见 [平台与自动化说明](bymyside/docs/compatibility.md)。
 
 ### 需要每天回复、每周手动触发吗？
 
@@ -149,7 +149,7 @@ flowchart TD
 
 ### 个人数据存在哪里？
 
-使用记录保存在项目的 `.bymyside/`，已加入 Git 忽略规则。运行时相关资料会由所选 AI 平台处理；外部日历和消息渠道按授权使用。提交反馈时请使用虚构或脱敏资料，不上传私人工作区。
+使用记录保存在项目的 `.bymyside/`，应由仓库根目录的 `.gitignore` 排除。运行时相关资料会由所选 AI 平台处理；外部日历和消息渠道按授权使用。提交反馈时请使用虚构或脱敏资料，不上传私人工作区。
 
 ### 是否收费？
 
@@ -157,17 +157,19 @@ flowchart TD
 
 ## 项目状态
 
-作者已在日常使用中运行自动流程。当前公开版已由用户确认通过 Codex 测试，其他平台尚未逐一验证；试用步骤见 [首次试用清单](docs/first-user-trial.md)。
+作者已在日常使用中运行自动流程。当前公开版已由用户确认通过 Codex 测试，其他平台尚未逐一验证；试用步骤见 [首次试用清单](bymyside/docs/first-user-trial.md)。
 
 <details>
 <summary>项目结构与维护</summary>
 
 ```text
-START_HERE.md      由助手执行的初始化指引
-skill/             共享规则、记录模板与可选归档工具
-automations/       晨间、晚间和每周执行提示
-examples/memory/   虚构示例资料
-docs/              使用、兼容性与试用文档
+README.md                    项目首页
+bymyside/
+├── START_HERE.md             由助手执行的初始化指引
+├── skill/                    共享规则、记录模板与可选归档工具
+├── automations/              晨间、晚间和每周执行提示
+├── examples/memory/          虚构示例资料
+└── docs/                     使用、兼容性与试用文档
 ```
 
 日常记录由助手维护，用户无需手动编辑文件。更新规则后，自动任务需要加载同一版规则；切换平台时暂停旧任务并带走自己的记录，避免重复提醒。
@@ -180,4 +182,5 @@ docs/              使用、兼容性与试用文档
 
 ## 许可证
 
-[MIT](LICENSE) · Copyright © 2026 leazihan
+[MIT](bymyside/LICENSE) · Copyright © 2026 leazihan
+
