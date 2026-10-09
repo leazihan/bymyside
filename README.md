@@ -63,15 +63,16 @@ bymyside 将这些工作交给助手维护。你可以随时输入事项、想�
 <details>
 <summary>使用 Git 下载</summary>
 
-从本页 **Code** 菜单复制仓库地址，将下面的 `REPOSITORY_URL` 替换为该地址：
+复制以下命令，在终端中运行：
 
 ```sh
-git clone REPOSITORY_URL
+git clone https://github.com/leazihan/bymyside.git
 ```
 
-然后用 AI 助手打开下载目录中的 `bymyside` 子文件夹，发送上面的初始化指令。
+下载完成后，用 AI 助手打开 `bymyside/bymyside` 文件夹（内层应包含 `START_HERE.md`），发送上面的初始化指令。
 
 </details>
+
 
 <details>
 <summary>初始化会做什么？</summary>
